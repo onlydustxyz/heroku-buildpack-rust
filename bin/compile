@@ -105,6 +105,7 @@ if [ -f "$CACHE_DIR/target.tar" ]; then
     echo "-----> Restoring build cache"
     cd "$CACHE_DIR"
     tar -xf "$CACHE_DIR/target.tar"
+    rm -f "$CACHE_DIR/target.tar"
 fi
 
 # Make sure we have an appropriate Rust toolchain installed.
