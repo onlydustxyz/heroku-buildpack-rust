@@ -150,6 +150,8 @@ if [ $RUST_SKIP_BUILD -ne 1 ]; then
   echo "-----> Archiving build cache"
   cd "$CACHE_DIR"
   tar -cf target.tar -C "$CARGO_TARGET_DIR" target
+  echo "-----> Removing the target dir to avoid it being cached"
+  rm -rf "$CARGO_TARGET_DIR"
 else
   echo "-----> Skipping Cargo build"
 fi
