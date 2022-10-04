@@ -120,7 +120,7 @@ mkdir -p "$CACHE_DIR"
 if [ $CACHE_WITH_BUCKETEER -eq 1 ]; then
   echo "-----> Getting the build cache"
   cd $CACHE_DIR
-  $BP_DIR/lib/kache load "cache"
+  # $BP_DIR/lib/kache load "cache"
 fi
 
 # Make sure we have an appropriate Rust toolchain installed.
